@@ -1,13 +1,13 @@
 import pygame
 from pygame.locals import *
-
+from pygame import display
 class App:
     def __init__(self):
         self._running = True
         self._display_surf = None
         self.size = self.weight, self.height = 640, 400
-		mapImg = pygame.image.load('map.png')
-		display.set_mode((640,400)).blit(mapImg, (0,0))
+        mapImg = pygame.image.load('map.png')
+        display.set_mode((640,400)).blit(mapImg, (640,400))
 
     def on_init(self):
         pygame.init()
